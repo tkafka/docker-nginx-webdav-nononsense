@@ -10,7 +10,7 @@ FROM ghcr.io/linuxserver/baseimage-ubuntu:2121cada-ls3
 
 LABEL maintainer="Daniel Graziotin, daniel@ineed.coffee"
 
-ENV NGINX_VER 1.19.6
+ENV NGINX_VER 1.18.0
 ENV NGINX_DAV_EXT_VER 3.0.0
 ENV NGINX_FANCYINDEX_VER 0.5.1
 ENV HEADERS_MORE_VER 0.33
@@ -55,7 +55,7 @@ RUN ./configure --prefix=/etc/nginx \
   --user=nginx \
   --group=nginx \
   --build=Ubuntu \
-  --builddir=nginx-1.19.0 \
+  --builddir=nginx-${NGINX_VER} \
   --with-select_module \
   --with-poll_module \
   --with-threads \
