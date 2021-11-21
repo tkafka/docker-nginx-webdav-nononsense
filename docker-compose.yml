@@ -4,6 +4,7 @@ services:
         container_name: nginxwebdav
         build:
             context: .
+        #image: dgraziotin/nginx-webdav-nononsense:1.21.1
         volumes:
             - ./data:/data
             - ./htpasswd:/etc/nginx/htpasswd
